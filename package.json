@@ -1,5 +1,5 @@
 {
-  "name": "@moontography/browser-cryptography",
+  "name": "browser-cryptography",
   "version": "0.0.1",
   "description": "Cryptographic functions for the browser.",
   "main": "./dist/Cryptography.js",
