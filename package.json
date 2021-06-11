@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Cryptographic functions for the browser.",
   "main": "./dist/Cryptography.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moontography/browser-cryptography"
+  },
   "scripts": {
     "build": "tsc",
     "test": "mocha --exit -r ts-node/register --recursive './src/**/*.spec.ts'"
@@ -16,5 +20,9 @@
     "mocha": "^9.0.0",
     "ts-node": "^10.0.0",
     "typescript": "^4.0.5"
-  }
+  },
+  "keywords": [
+    "browser",
+    "cryptography"
+  ]
 }
