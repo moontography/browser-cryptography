@@ -20,19 +20,21 @@ export default function Cryptography(root: Window = window) {
       return enc.encode(data);
     },
 
+    async generateCryptoKey() {
+      return await (root.crypto.subtle as any).generateKey(
+        this.algo,
+        true,
+        this.keyUsages
+      );
+    },
+
     async encryptMessage(
       data: string,
       passedKey?: CryptoKey
     ): Promise<ICipherInfo> {
       const encoded: Uint8Array = this.getMessageEncoding(data);
       // iv will be needed for decryption
-      const key: CryptoKey =
-        passedKey ||
-        (await (root.crypto.subtle as any).generateKey(
-          this.algo,
-          true,
-          this.keyUsages
-        ));
+      const key: CryptoKey = passedKey || (await this.generateCryptoKey());
       const iv = root.crypto.getRandomValues(new Uint8Array(16));
       return {
         iv,
