@@ -1,6 +1,6 @@
 {
   "name": "browser-cryptography",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Cryptographic functions for the browser.",
   "main": "./dist/Cryptography.js",
   "repository": {
